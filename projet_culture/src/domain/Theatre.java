@@ -1,26 +1,40 @@
 package domain;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Theatre extends Event {
 	
 	
-	private Date date;
+	private LocalDate  datestart;
+	private LocalDate  dateend;
 	private String name;
+
 	
-	public Theatre(Date date,String name,int capacity) {
+	public Theatre(LocalDate  datestart,LocalDate  dateend,String name,int capacity) {
 		super(capacity);
-		this.date = date;
+		this.datestart = datestart;
+		this.dateend = dateend;
 		this.name = name;
+		
+		
 		
 	}
 
-	public Date getDate() {
-		return date;
+	public LocalDate getDatestart() {
+		return datestart;
+	}
+
+	public LocalDate getDateend() {
+		return dateend;
 	}
 
 	public String getName() {
 		return name;
 	}
+
+
+
+
 	
 }

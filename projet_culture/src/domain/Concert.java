@@ -23,5 +23,12 @@ public class Concert extends Event{
 		return groupes_name;
 	}
 
+	@Override
+	public int getCapacity() {
+		return super.getCapacity();
+	}
+
+
+
 
 }
