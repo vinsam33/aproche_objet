@@ -1,33 +1,22 @@
 package domain;
 
-import java.time.LocalDate;
-import java.util.Date;
+import java.util.Calendar;
+import java.util.List;
 
 public class Theatre extends Event {
 	
 	
-	private LocalDate  datestart;
-	private LocalDate  dateend;
-	private String name;
+	private final String name;
 
 	
-	public Theatre(LocalDate  datestart,LocalDate  dateend,String name,int capacity) {
-		super(capacity);
-		this.datestart = datestart;
-		this.dateend = dateend;
+	public Theatre(List<Calendar>  dates,String name,int capacity,int duration) {
+		super(capacity,dates,duration);
 		this.name = name;
 		
 		
 		
 	}
 
-	public LocalDate getDatestart() {
-		return datestart;
-	}
-
-	public LocalDate getDateend() {
-		return dateend;
-	}
 
 	public String getName() {
 		return name;
