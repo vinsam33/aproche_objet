@@ -1,0 +1,39 @@
+package domain;
+
+import java.util.Calendar;
+
+public class Theatre extends Event {
+	
+	
+	private Calendar  datestart;
+	private Calendar  dateend;
+	private String name;
+
+	
+	public Theatre(Calendar  datestart,Calendar  dateend,String name,int capacity) {
+		super(capacity);
+		this.datestart = datestart;
+		this.dateend = dateend;
+		this.name = name;
+		
+		
+		
+	}
+
+	public Calendar getDatestart() {
+		return datestart;
+	}
+
+	public Calendar getDateend() {
+		return dateend;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+
+
+
+	
+}

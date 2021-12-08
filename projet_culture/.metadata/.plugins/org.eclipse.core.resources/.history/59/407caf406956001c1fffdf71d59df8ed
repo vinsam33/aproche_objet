@@ -1,0 +1,19 @@
+package domain;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+public class Halls {
+	
+	private List<List<Hall>> hallsDisponibility = new ArrayList<>();
+	private List<Hall> halls = new ArrayList<>();
+	
+	public Halls(List<Hall> halls) {
+		this.halls = halls;
+		for (Hall h : halls) {
+			for (Calendar date : h.getDate())
+			hallsDisponibility.add()
+		}
+	}
+}

@@ -11,6 +11,10 @@ import java.util.UUID;
 
 public class Hall  {
 	private int capacity;
+<<<<<<< HEAD
+=======
+	private boolean confinement;
+>>>>>>> 64d1ecf0aad97a0d8d93d265891e54933d0f1023
 	private Map<Calendar,Integer> date = new HashMap<>();
 	private UUID id;
 	

@@ -8,10 +8,18 @@ import java.util.Map;
 
 public class HallDisponibility {
 	
+<<<<<<< HEAD
 	private  Map<Integer,Map<Integer,List<Hall>>> hallsDisponibility = new HashMap<>();
 
 	
 	public HallDisponibility(List<Hall> halls) {
+=======
+	private Map<Integer,Map<Integer,List<Hall>>> hallsDisponibility = new HashMap<>();
+	private List<Hall> halls = new ArrayList<>();
+	
+	public HallDisponibility(List<Hall> halls) {
+		this.halls = halls;
+>>>>>>> 64d1ecf0aad97a0d8d93d265891e54933d0f1023
 		for (int i = 1;i<=52;i++) {
 			Map<Integer,List<Hall>> tmp = new HashMap<>();
 			for (int j = 1; j <=7;j++) {

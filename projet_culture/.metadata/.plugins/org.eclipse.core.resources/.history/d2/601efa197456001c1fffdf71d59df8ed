@@ -1,0 +1,44 @@
+package domain;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Hall  {
+	private int capacity;
+	private Map<Calendar,Integer> date = new HashMap<>();
+	private int id;
+	private int genid  = 0;
+	
+	private List<Event> events = new ArrayList<>();
+	
+	
+	//reste horaire et liste d'évenements 
+	
+	public Hall(int capacity ,List<Calendar>opendates) {
+		this.date = date;
+		this.id = genid++;
+	}
+
+	public List<Calendar> getDate() {
+		return date.keySet();
+	}
+
+	public int getCapacity() {
+		return capacity;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+
+	
+	
+	
+	
+	
+}
