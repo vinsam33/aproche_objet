@@ -1,7 +1,0 @@
-package domain;
-
-import java.util.ArrayList;
-
-public class Halls {
-	List<List<Integer>> halls = new ArrayList<E>()
-}

@@ -9,21 +9,16 @@ import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-public class Hall  {
+public class Hall {
 	private int capacity;
-<<<<<<< HEAD
-=======
-	private boolean confinement;
->>>>>>> 64d1ecf0aad97a0d8d93d265891e54933d0f1023
-	private Map<Calendar,Integer> date = new HashMap<>();
+	private Map<Calendar, Integer> date = new HashMap<>();
 	private UUID id;
-	
+
 	private List<Event> events = new ArrayList<>();
-	
-	
-	//reste horaire et liste d'évenements 
-	
-	public Hall(int capacity ,Map<Calendar,Integer>opendates) {
+
+	// reste horaire et liste d'évenements
+
+	public Hall(int capacity, Map<Calendar, Integer> opendates) {
 		this.date = opendates;
 	}
 
@@ -34,7 +29,7 @@ public class Hall  {
 	public int getCapacity() {
 		return capacity;
 	}
-	
+
 	public int getDuration(Calendar cal) {
 		return date.get(cal);
 	}
@@ -45,13 +40,7 @@ public class Hall  {
 
 	public void addEvent(Event event) {
 		events.add(event);
-		
+
 	}
 
-
-	
-	
-	
-	
-	
 }
