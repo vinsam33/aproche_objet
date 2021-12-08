@@ -2,15 +2,16 @@ package infra;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import domain.City;
 import domain.Repository;
 
 public class RepositoryInMemory implements Repository {
-	private Map<Integer, City> repomemories;
+	private Map<UUID, City> repomemories;
 
 	public RepositoryInMemory() {
-		this.repomemories = new HashMap<Integer, City>();
+		this.repomemories = new HashMap<UUID, City>();
 	}
 
 	public void save(City city) {
@@ -18,7 +19,7 @@ public class RepositoryInMemory implements Repository {
 
 	}
 
-	public City findbyid(int id) {
+	public City findbyid(UUID id) {
 		return repomemories.get(id);
 
 	}

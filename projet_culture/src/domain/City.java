@@ -5,13 +5,19 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public class City {
 	private HallDisponibility hallDisponibility;
+	private UUID id;
 
 	private List<Hall> halls = new ArrayList<>();
 	// private List<Boolean> weeksTaken = new ArrayList<>();
 
+	public City(List<Hall> halls ) {
+		this.id = UUID.randomUUID();
+		
+	}
 	public boolean attributeEvent(Event event) {
 		Map<Integer, Map<Integer, List<Hall>>> halls = hallDisponibility.getHallsDisponibility();
 		for (Calendar date : event.getDates()) {

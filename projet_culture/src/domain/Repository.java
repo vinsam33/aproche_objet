@@ -1,8 +1,10 @@
 package domain;
 
+import java.util.UUID;
+
 public interface Repository {
 	public void save(City city);
 
-	public City findbyid(int id);
+	public City findbyid(UUID id);
 
 }
