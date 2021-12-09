@@ -9,10 +9,8 @@ import java.util.Map;
 public class HallDisponibility {
 
 	private Map<Integer, Map<Integer, List<Hall>>> hallsDisponibility = new HashMap<>();
-	private List<Hall> halls = new ArrayList<>();
 
 	public HallDisponibility(List<Hall> halls) {
-		this.halls = halls;
 
 		for (int i = 1; i <= 52; i++) {
 			Map<Integer, List<Hall>> tmp = new HashMap<>();

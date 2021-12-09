@@ -12,13 +12,12 @@ import java.util.UUID;
 public class Hall {
 	private int capacity;
 	private Map<Calendar, Integer> date = new HashMap<>();
-	private UUID id;
+	private final UUID id;
 
 	private List<Event> events = new ArrayList<>();
 
-	// reste horaire et liste d'évenements
-
 	public Hall(int capacity, Map<Calendar, Integer> opendates) {
+		this.id = UUID.randomUUID();
 		this.date = opendates;
 	}
 

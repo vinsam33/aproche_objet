@@ -5,14 +5,16 @@ import java.util.List;
 
 public abstract class Event {
 
-	private int capacity;
-	private List<Calendar> dates;
-	private int duration;
+	private final int capacity;
+	private final List<Calendar> dates;
+	private final int duration;
+	private final String name;
 
-	public Event(int capacity, List<Calendar> dates, int duration) {
+	public Event(String name, int capacity, List<Calendar> dates, int duration) {
 		this.capacity = capacity;
 		this.dates = dates;
 		this.duration = duration;
+		this.name = name;
 	}
 
 	public List<Calendar> getDates() {
@@ -25,6 +27,10 @@ public abstract class Event {
 
 	public int getDuration() {
 		return duration;
+	}
+
+	public String getName() {
+		return name;
 	}
 
 }
