@@ -27,21 +27,21 @@ public class City {
 		halls.add(new Hall(300, dateh1));
 
 		Map<Calendar, Integer> dateh2 = new HashMap<>();
-		dateh1.put(new GregorianCalendar(2021, 01, 02), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 04), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 12), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 21), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 27), 3);
+		dateh2.put(new GregorianCalendar(2021, 01, 02), 3);
+		dateh2.put(new GregorianCalendar(2021, 01, 04), 3);
+		dateh2.put(new GregorianCalendar(2021, 01, 12), 3);
+		dateh2.put(new GregorianCalendar(2021, 01, 21), 3);
+		dateh2.put(new GregorianCalendar(2021, 01, 27), 3);
 		halls.add(new Hall(500, dateh2));
 
 		Map<Calendar, Integer> dateh3 = new HashMap<>();
-		dateh1.put(new GregorianCalendar(2021, 01, 03), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 06), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 14), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 23), 3);
-		dateh1.put(new GregorianCalendar(2021, 01, 29), 3);
+		dateh3.put(new GregorianCalendar(2021, 01, 03), 3);
+		dateh3.put(new GregorianCalendar(2021, 01, 06), 3);
+		dateh3.put(new GregorianCalendar(2021, 01, 14), 3);
+		dateh3.put(new GregorianCalendar(2021, 01, 23), 3);
+		dateh3.put(new GregorianCalendar(2021, 01, 29), 3);
 		halls.add(new Hall(1000, dateh3));
-		System.out.println(halls);
+		
 		hallDisponibility = new HallDisponibility(halls);
 
 	}
@@ -53,7 +53,6 @@ public class City {
 			List<Hall> possibleHalls = halls.get(date.get(Calendar.WEEK_OF_YEAR)).get(date.get(Calendar.DAY_OF_WEEK));
 			for (Hall h : possibleHalls) {
 				if ((h.getCapacity() <= event.getCapacity()) && (event.getDuration() <= h.getDuration(date))) {
-					System.out.println(id);
 					h.addEvent(event);
 					attribute = true;
 					possibleHalls.remove(h);
