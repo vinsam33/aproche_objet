@@ -47,7 +47,7 @@ public class MyAppli {
 				events.add(new Concert(cal, "concert3", 150, 2));
 				for (Event e : events) {
 					if (!jolicite.attributeEvent(e)) {
-						System.out.println("un des evenements n'a pas put etre attribuïe fermeture du programme");
+						System.out.println("un des evenements n'a pas put etre attribue fermeture du programme");
 						System.exit(0);
 					}
 				}
@@ -57,7 +57,7 @@ public class MyAppli {
 				jolicite.displayEvents();
 				break;
 			case 2:
-				System.out.println("Veuillez rentrer un 'evenement, cet evenement doit etre programmï¿½ en Janvier 2021");
+				System.out.println("Veuillez rentrer un 'evenement, cet evenement doit etre programme en Janvier 2021");
 				do {
 					String[] date = new String[3];
 					String[] dateDebut = new String[3];
@@ -73,7 +73,7 @@ public class MyAppli {
 							"veuillez tapez 1 si l'evenement est un concert et 2 si l'evenement est un theatre");
 					switch (Integer.parseInt(sc.nextLine())) {
 						case 1:
-							System.out.println("Veuillez ï¿½crire la date du concert au format DD/MM/YYYY");
+							System.out.println("Veuillez ecrire la date du concert au format DD/MM/YYYY");
 							String dateTmp = sc.nextLine();
 							date = dateTmp.split("/");
 							calMan.add(new GregorianCalendar(Integer.parseInt(date[2]), Integer.parseInt(date[1]),
@@ -82,11 +82,11 @@ public class MyAppli {
 							break;
 						case 2:
 							System.out.println(
-									"Veuillez ï¿½crire la premiere date de la piece de theatre au format DD/MM/YYYY");
+									"Veuillez  ecrire la premiere date de la piece de theatre au format DD/MM/YYYY");
 							String dateTmpDebut = sc.nextLine();
 							dateDebut = dateTmpDebut.split("/");
 							System.out.println(
-									"Veuillez ï¿½crire la derniere date de la piece de theatre au format DD/MM/YYYY");
+									"Veuillez ecrire la derniere date de la piece de theatre au format DD/MM/YYYY");
 							String dateTmpFin = sc.nextLine();
 							dateFin = dateTmpFin.split("/");
 							if (Integer.parseInt(dateDebut[0]) > Integer.parseInt(dateFin[0])) {
@@ -105,13 +105,13 @@ public class MyAppli {
 				} while (Integer.parseInt(sc.nextLine()) != 2);
 				for (Event e : events) {
 					if (!jolicite.attributeEvent(e)) {
-						System.out.println("un des evenements n'a pas put etre attribuï¿½, fermeture du programme");
+						System.out.println("un des evenements n'a pas put etre attribue, fermeture du programme");
 						System.exit(0);
 					}
 				}
 				rep.save(jolicite);
 				System.out.println(
-						"Tout les evenements ont put etre attribuï¿½ et la programmation a ï¿½tï¿½ sauvegardï¿½ en mï¿½moire");
+						"Tout les evenements ont put etre attribue et la programmation a ete sauvegarde en memoire");
 				jolicite.displayEvents();
 				break;
 
