@@ -19,9 +19,9 @@ public class MyAppli {
 		Scanner sc = new Scanner(System.in);
 		City jolicite = new City();
 		CityRepository rep = new RepositoryInMemory();
-		System.out.println("Bienvenue dans le systeme de gestion de joliCitï¿½");
+		System.out.println("Bienvenue dans le systeme de gestion de joliCite");
 		System.out.println(
-				"Si vous voulez utiliser le jeu d'essai d'evenement, tapez 1 et si vous voulez vous meme ï¿½crire des evenements tapez 2");
+				"Si vous voulez utiliser le jeu d'essai d'evenement, tapez 1 et si vous voulez vous meme ecrire des evenements tapez 2");
 		List<Event> events = new ArrayList<>();
 
 		switch (Integer.parseInt(sc.nextLine())) {
@@ -47,13 +47,13 @@ public class MyAppli {
 				events.add(new Concert(cal, "concert3", 150, 2));
 				for (Event e : events) {
 					if (!jolicite.attributeEvent(e)) {
-						System.out.println("un des evenements n'a pas put etre attribuï¿½, fermeture du programme");
+						System.out.println("un des evenements n'a pas put etre attribuïe fermeture du programme");
 						System.exit(0);
 					}
 				}
 				rep.save(jolicite);
 				System.out.println(
-						"Tout les evenements ont put etre attribuï¿½ et la programmation a ï¿½tï¿½ sauvegardï¿½ en mï¿½moire");
+						"Tout les evenements ont put etre attribuïe et la programmation a ete sauvegarde en memoire");
 				jolicite.displayEvents();
 				break;
 			case 2:
