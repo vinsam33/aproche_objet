@@ -16,7 +16,7 @@ public class City {
 	private List<Hall> halls = new ArrayList<>();
 	// private List<Boolean> weeksTaken = new ArrayList<>();
 
-	public City(List<Hall> halls) {
+	public City() {
 		this.id = UUID.randomUUID();
 
 		Map<Calendar, Integer> dateh1 = new HashMap<>();
