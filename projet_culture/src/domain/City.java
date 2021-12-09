@@ -14,7 +14,6 @@ public class City {
 	private UUID id;
 
 	private List<Hall> halls = new ArrayList<>();
-	// private List<Boolean> weeksTaken = new ArrayList<>();
 
 	public City() {
 		this.id = UUID.randomUUID();
@@ -48,20 +47,22 @@ public class City {
 	}
 
 	public boolean attributeEvent(Event event) {
+		boolean attribute = false;
 		Map<Integer, Map<Integer, List<Hall>>> halls = hallDisponibility.getHallsDisponibility();
 		for (Calendar date : event.getDates()) {
 
 			List<Hall> possibleHalls = halls.get(date.get(Calendar.WEEK_OF_YEAR)).get(date.get(Calendar.DAY_OF_WEEK));
+			//if(nobody)
 			for (Hall h : possibleHalls) {
 				if ((h.getCapacity() <= event.getCapacity()) && (event.getDuration() <= h.getDuration(date))) {
 					h.addEvent(event);
-					// weeksTaken.set(date.get(Calendar.WEEK_OF_YEAR), true);
+					attribute = true;
 					possibleHalls.remove(h);
-					return true;
+					break;
 				}
 			}
 		}
-		return false;
+		return attribute;
 
 	}
 

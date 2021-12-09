@@ -63,7 +63,7 @@ public class MyAppli {
 				String name = sc.nextLine();
 				System.out.println("veuillez tapez la capacite de l'evenement");
 				int cap = Integer.parseInt(sc.nextLine());
-				System.out.println("veuillez tapez la duree de l'evenement ");
+				System.out.println("veuillez tapez la duree de l'evenement (en heure) ");
 				int duration = Integer.parseInt(sc.nextLine());
 				System.out.println("veuillez tapez 1 si l'evenement est un concert et 2 si l'evenement est un theatre");
 				switch(Integer.parseInt(sc.nextLine())) {
