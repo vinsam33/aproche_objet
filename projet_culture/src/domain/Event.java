@@ -33,4 +33,9 @@ public abstract class Event {
 		return name;
 	}
 
+	@Override
+	public String toString() {
+		return "Event [name=" + name + "]";
+	}
+
 }

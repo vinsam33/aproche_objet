@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public class City {
 	private HallDisponibility hallDisponibility;
-	private UUID id;
+	private final UUID id;
 
 	private List<Hall> halls = new ArrayList<>();
 
@@ -41,7 +41,7 @@ public class City {
 		dateh1.put(new GregorianCalendar(2021, 01, 23), 3);
 		dateh1.put(new GregorianCalendar(2021, 01, 29), 3);
 		halls.add(new Hall(1000, dateh3));
-
+		System.out.println(halls);
 		hallDisponibility = new HallDisponibility(halls);
 
 	}
@@ -50,11 +50,10 @@ public class City {
 		boolean attribute = false;
 		Map<Integer, Map<Integer, List<Hall>>> halls = hallDisponibility.getHallsDisponibility();
 		for (Calendar date : event.getDates()) {
-
 			List<Hall> possibleHalls = halls.get(date.get(Calendar.WEEK_OF_YEAR)).get(date.get(Calendar.DAY_OF_WEEK));
-			//if(nobody)
 			for (Hall h : possibleHalls) {
 				if ((h.getCapacity() <= event.getCapacity()) && (event.getDuration() <= h.getDuration(date))) {
+					System.out.println(id);
 					h.addEvent(event);
 					attribute = true;
 					possibleHalls.remove(h);
@@ -68,6 +67,16 @@ public class City {
 
 	public UUID getId() {
 		return id;
+	}
+
+	public void displayEvents() {
+		int i =1;
+		for (Hall h : halls) {
+			System.out.println("Salle" + i);
+			h.displayEvents();
+			i++;
+		}
+		
 	}
 
 }

@@ -41,5 +41,11 @@ public class Hall {
 		events.add(event);
 
 	}
+	
+	public void displayEvents() {
+		for (Event e : events) {
+			System.out.println(e.toString());
+		}
+	}
 
 }

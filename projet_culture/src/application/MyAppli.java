@@ -55,6 +55,7 @@ public class MyAppli {
 			}
 			rep.save(jolicite);
 			System.out.println("Tout les evenements ont put etre attribué et la programmation a été sauvegardé en mémoire");
+			jolicite.displayEvents();
 			break;
 		case 2:
 			System.out.println("Veuillez rentrer un 'evenement, cet evenement doit etre programmé en Janvier 2021");
@@ -105,6 +106,7 @@ public class MyAppli {
 			}
 			rep.save(jolicite);
 			System.out.println("Tout les evenements ont put etre attribué et la programmation a été sauvegardé en mémoire");
+			jolicite.displayEvents();
 			break;
 		
 		}
