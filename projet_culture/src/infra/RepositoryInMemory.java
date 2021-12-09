@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.UUID;
 
 import domain.City;
-import domain.CItyRepository;
+import domain.CityRepository;
 
-public class RepositoryInMemory implements CItyRepository {
+public class RepositoryInMemory implements CityRepository {
 	private Map<UUID, City> repomemories;
 
 	public RepositoryInMemory() {

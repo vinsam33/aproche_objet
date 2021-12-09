@@ -6,10 +6,13 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
 
+
 import domain.City;
+import domain.CityRepository;
 import domain.Concert;
 import domain.Event;
 import domain.Theatre;
+import infra.RepositoryInMemory;
 
 public class MyAppli {
 	
@@ -18,6 +21,7 @@ public class MyAppli {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		City jolicite = new City();
+		CityRepository rep = new RepositoryInMemory();
 		System.out.println("Bienvenue dans le systeme de gestion de joliCité");
 		System.out.println("Si vous voulez utiliser le jeu d'essai d'evenement, tapez 1 et si vous voulez vous meme écrire des evenements tapez 2");
 		List<Event> events = new ArrayList<>();
@@ -49,7 +53,7 @@ public class MyAppli {
 					System.exit(0);
 				}
 			}
-			
+			rep.save(jolicite);
 			System.out.println("Tout les evenements ont put etre attribué et la programmation a été sauvegardé en mémoire");
 			break;
 		case 2:
@@ -99,6 +103,7 @@ public class MyAppli {
 					System.exit(0);
 				}
 			}
+			rep.save(jolicite);
 			System.out.println("Tout les evenements ont put etre attribué et la programmation a été sauvegardé en mémoire");
 			break;
 		
